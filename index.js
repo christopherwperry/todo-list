@@ -38,7 +38,11 @@ app.post("/", function (req, res) {
 
 app.post("/move", function (req, res) {
   console.log(req.body.complete);
-  todo.pop(this);
+  for (let i = 0;  i < todo.length; i++){
+    if(req.body.complete === todo[i]){
+      todo.splice(i,1);
+    }
+  };
   completed.push(req.body.complete);
   res.redirect('/');
 })
