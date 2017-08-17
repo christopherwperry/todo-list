@@ -1,4 +1,19 @@
 body {
   margin: 0;
-  background-color: blue;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+form {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.todo-item {
+  font-size: 16px;
+  border: none;
+}
+
+h1, h2 {
+  text-decoration: underline;
 }
