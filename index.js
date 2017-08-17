@@ -32,15 +32,15 @@ app.get('/', function(req, res){
 });
 
 app.post("/", function (req, res) {
-  if (req.body.todo){
-    todo.push(req.body.todo);
-    res.redirect('/');
-  } else {
-    todo.pop(this.value);
-    completed.push(this.value);
-    res.redirect('/');
-  }
+  todo.push(req.body.todo);
+  res.redirect('/');
 });
+
+app.post("/move", function (req, res) {
+  todo.pop(req.body.complete);
+  completed.push(req.body.complete);
+  res.redirect('/');
+})
 
 app.listen(port, function(){
   console.log("The server is running on port 3000");
