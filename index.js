@@ -32,8 +32,6 @@ app.get('/', function(req, res){
 });
 
 app.post("/", function (req, res) {
-  console.log(req.body.todo);
-  console.log(this.value);
   if (req.body.todo){
     todo.push(req.body.todo);
     res.redirect('/');
