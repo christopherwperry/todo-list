@@ -37,7 +37,8 @@ app.post("/", function (req, res) {
 });
 
 app.post("/move", function (req, res) {
-  todo.pop(req.body.complete);
+  console.log(req.body.complete);
+  todo.pop(this);
   completed.push(req.body.complete);
   res.redirect('/');
 })
